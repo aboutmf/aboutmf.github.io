@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhamad Firmansyah - Home</title>
+    <link rel="stylesheet" href="../assets/vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendors/fontawesome/all.css">
+    <link rel="stylesheet" href="../assets/vendors/animate/animate.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .parralax{
+            width: 100%;
+            height: 100vh;
+            background-image: url("../assets/img/31555.jpg");
+            background-size: cover;
+            position: relative;
+        }
+        .content-div{
+            width: 100%;
+            height: 100vh;
+        }
+        .headline{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 250px;
+            position: fixed;
+            top: 10vh;
+            color: #ffffff;
+            width: 100%;
+            text-align: center;
+            text-shadow: 1px 1px 10px rgba(0,0,0,.1);
+        }
+        .mask{
+            width: 100%;
+            height: 100%;
+            background-color: #343432;
+            background-image: url("../assets/img/31555.jpg");
+            background-size: cover;
+            mask-image: url(../assets/img/c1.png);
+            -webkit-mask-image: url(../assets/img/c1.png);
+            -webkit-mask-size: cover;
+        }
+        .text-blue{
+            color: blue;
+        }
+        .text-green{
+            color: green;
+        }
+        .text-orange{
+            color: orange;
+        }
+        .text-purple{
+            color: purple;
+        }
+        .bio-group{
+            background: white;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .bio-section{
+            height: 100vh;
+            
+        }
+        .bio-section .bio{
+            /* transform: translateY(-55%); */
+        }
+        .bio-section .bio-img-group{
+            z-index: 4;
+        }
+        .bio-section .bio-title{
+            margin-left: -10vw;
+            margin-top: 10vh;
+            font-weight: bold;
+        }
+        .bio-section .bio-description{
+            font-family: sans-serif;
+        }
+
+        .portofolio-grid{
+            
+        }
+        .portofolio-grid-group{
+            height: 30vh;
+        }
+        .portofolio-grid-section{
+
+        }
+        .h-100vh{
+            min-height: 100vh;
+        }
+        .project-block-item{
+            box-sizing: border-box;
+        }
+            .project-img-item{
+                height: 60vh;
+                /* background-color: blue; */
+            }
+
+                .project-img-item:hover{
+                    animation: 1s bounce ease-in;
+                }
+                .project-img-mobile{
+                    height: 100%;
+                }
+                .project-img-website{
+                    width: 80%;
+                }
+            .project-block-title{
+                height: 15vh;
+                /* background-color: green; */
+            }
+            .project-block-description{
+                box-sizing: border-box;
+                height: 15vh;
+                /* background-color: hotpink; */
+            }
+            .project-block-footer{
+                height: 10vh;
+                /* background-color: orange; */
+            }
+        .bg-gradient-warning{
+            background-image: linear-gradient(to bottom right, orange, yellow);
+        }
+        .bg-gradient-success{
+            background-image: linear-gradient(to bottom right, green, lightgreen);
+        }
+        .bg-gradient-primary{
+            background-image: linear-gradient(to top right, blue, lightblue);
+        }
+        .bg-gradient-danger{
+            background-image: linear-gradient(to top right, red, pink);
+        }
+        .bg-gradient-light{
+            background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(223, 223, 223));
+        }
+
+        @keyframes move-gradient{
+            0%{
+                background-position: 50% 100% !important;
+            }
+            50%{
+                background-position: 100% 50% !important;
+            }
+            100%{
+                background-position: 50% 100% !important;
+            }
+        }
+
+        .bg-animation-gradient-light{
+            background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(243, 243, 243));
+            background-size: 200% 200%;
+            background-position: 200% 200%;
+            animation: 3s move-gradient infinite reverse !important;
+        }
+
+        @keyframes move-gradient {
+            0%{
+                background-position: 200% 200%;
+            }
+            /* 25%{
+                background-position: 150% 150%;
+            } */
+            50%{
+                background-position: 150% 150%;
+            }
+            /* 75%{
+                background-position: 150% 150%s;
+            } */
+            100%{
+                background-position: 100% 100%;
+            }
+        }
+        
+
+        .blog-post-block a{
+            color: black !important;
+        }
+        .blog-post-block a:hover{
+            text-decoration: none;
+        }
+        .blog-post-block a:hover h1::before{
+            width: 100%;
+            transition-duration: 2s;
+        }
+
+        .blog-post-block{
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-post-bg-icon{
+            position: absolute;
+            z-index: 1;
+            left: -10px;
+            pointer-events: none;
+        }
+        .blog-post-group{
+            z-index: 2;
+            position: relative;
+        }
+
+        .blog-title:hover{
+            transform: scale(1.03);
+        }
+
+        .podcast-block{
+            position: relative;
+            overflow: hidden;
+        }
+
+        .podcast-block-group{
+            box-sizing: border-box;
+        }
+
+        .podcast-block-icon{
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .blog-post-item{
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-post-item .blog-item-background{
+            z-index: 1;
+            position: absolute;
+        }
+        
+        .blog-post-item .blog-item-background img{
+            height: 100%;
+            margin-left: -100px;
+        }
+
+        .blog-post-another-block{
+            background-image: url('../assets/portofolio/4.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .blog-post-item .blog-item-background::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(225,225,0,.5);
+        }
+    
+        .blog-post-item .card-body{
+            z-index: 2;
+            position: relative;
+        }
+
+        .blog-post-other .col-md-4{
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand f-quicksand" href="#"><b>Muhamad Firmansyah</b></a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portofolio.html">Portofolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connect on</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <!-- <a class="dropdown-item" href="#">Action 2</a> -->
+                                <a class="dropdown-item" href="#"><i class="fab fa-telegram text-primary" aria-hidden="true"></i> Telegram</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-envelope text-primary"></i> Mail</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-blogger-b text-orange"></i> Blogger</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-twitter-square text-primary" aria-hidden="true"></i> Twitter</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-whatsapp text-green" aria-hidden="true"></i> WhatsApp</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-youtube text-danger" aria-hidden="true"></i> Youtube</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-linkedin text-blue" aria-hidden="true"></i> LinkedIn</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-gitlab text-orange" aria-hidden="true"></i> GitLab</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-instagram text-purple" aria-hidden="true"></i> Instagram</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-facebook-square text-blue" aria-hidden="true"></i> Facebook</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="blog-post-block py-4 bg-light">
+            <div class="container">
+                <div class="blog-post-bg-icon">
+                    <img src="../assets/img/pattern.png" alt="" class="w-100">
+                </div>
+                <div class="row mt-4 align-items-center blog-post-group">
+                    <div class="col-md-4 mb-4 py-2 px-4 rounded-lg">
+                        <!-- <small class="bg-gradient-light">Tue, 30 March 2020 | 02:30 PM</small> -->
+                        <h1 class="f-quicksand blog-title">
+                            <a href="#">
+                                Lorem ipsum dolor sit.
+                            </a>
+                        </h1>
+                        <p>
+                            Eius porro beatae exercitationem sequi, suscipit commodi eaque? Odio porro pariatur doloribus illo cumque assumenda.
+                        </p>
+                    </div>
+                    <div class="col-md-4 my-4 py-2 px-4 rounded-lg">
+                        <!-- <small class="bg-gradient-light">Tue, 30 March 2020 | 02:30 PM</small> -->
+                        <h1 class="f-quicksand blog-title">
+                            <a href="#">
+                                Consectetur Adipisicing Elit. Repudiandae..
+                            </a>
+                        </h1>
+                        <p>
+                            Accusamus minus quaerat labore quidem necessitatibus itaque sunt magni voluptatem. Veritatis similique architecto.
+                        </p>
+                    </div>
+                    <div class="col-md-4 my-4 py-2 px-4 rounded-lg">
+                        <!-- <small class="bg-gradient-light">Tue, 30 March 2020 | 02:30 PM</small> -->
+                        <h1 class="f-quicksand blog-title">
+                            <a href="#">
+                                Repudiandae, nulla quam consequatur?
+                            </a>
+                        </h1>
+                        <p>
+                            Saepe eligendi doloremque in corporis quam asperiores aperiam nisi ea voluptates obcaecati cumque repellat.
+                        </p>
+                    </div>
+                    <div class="col-md-12 text-right">
+                        <button class="btn btn-sm btn-light"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-post-another-block py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="row blog-post-other align-items-start text-white">
+                            <div class="col-md-4">
+                                <div class="card border-0 blog-post-item shadow-sm">
+                                    <!-- <i class="fa fa-circle blog-item-background text-light fa-10x position-absolute" aria-hidden="true"></i> -->
+                                    <div class="blog-item-background">
+                                        <img src="../assets/img/9.jpg" alt="" class="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="blog-title f-quicksand">What is a blog?</h1>
+                                        <p>
+                                            Many blog woners also set up blogs on websites devoted o the creation.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 blog-post-item shadow-sm">
+                                    <div class="blog-item-background">
+                                        <img src="../assets/portofolio/4.jpg" alt="" class="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="blog-title f-quicksand">Connecting people with COVID-9 information and resources</h1>
+                                        <p class="blog-embed badge badge-light">COVID-19</p>
+                                        <p>
+                                            We're introducing a more comprehensive experience for COVID-19 in Search, as well as other resources to help people stay informed
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 blog-post-item shadow-sm">
+                                    <div class="blog-item-background">
+                                        <img src="../assets/img/5.jpg" alt="" class="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="blog-title f-quicksand">Identifying vulnerabilites and protecting you from phising</h1>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 blog-post-item shadow-sm">
+                                    <div class="blog-item-background">
+                                        <img src="../assets/portofolio/3.jpg" alt="" class="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="blog-title f-quicksand">Learn from our mobility experts at Android OnAir</h1>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 blog-post-item shadow-sm">
+                                    <div class="blog-item-background">
+                                        <img src="../assets/img/5.jpg" alt="" class="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="blog-title f-quicksand">Discover podcasts you'll love with my podcast</h1>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 blog-post-item shadow-sm">
+                                    <div class="blog-item-background">
+                                        <img src="../assets/portofolio/2.jpg" alt="" class="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="blog-title f-quicksand">Make "work from home" work for you</h1>
+                                        <div class="blog-embed badge badge-light py-1">Google</div>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 blog-post-item shadow-sm">
+                                    <div class="blog-item-background">
+                                        <img src="../assets/img/11.jpg" alt="" class="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="blog-title f-quicksand">Stay updated on travel advisories and airline policies</h1>
+                                        <p class="blog-embed badge badge-light">Flights and Hotels</p>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card border-0 blog-post-item shadow-sm">
+                                    <div class="blog-item-background">
+                                        <img src="../assets/img/10.jpg" alt="" class="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="blog-title f-quicksand">With school closures, teachers can keep their lessons going remotely</h1>
+                                        <p class="blog-embed badge badge-light">Education</p>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-block py-2 bg-white shadow">
+            <div class="container text-right">
+                <span class="f-quicksand">Muhamad Firmansyah &copy; 2020</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../assets/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script src="../assets/vendors/bootstrap/bootstrap.min.js"></script>
+<script src="../assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendors/fontawesome/all.js"></script>
+<script src="../assets/vendors/wowjs/wow.min.js"></script>
+
+<script>
+    wow = new WOW({
+        animateClass: 'animated',
+        offset: 100
+    });
+
+    wow.init();
+</script>
+</html>

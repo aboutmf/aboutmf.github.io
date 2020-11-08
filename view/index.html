@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhamad Firmansyah - Home</title>
+    <link rel="stylesheet" href="../assets/vendors/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendors/fontawesome/all.css">
+    <link rel="stylesheet" href="../assets/vendors/animate/animate.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .parralax{
+            width: 100%;
+            height: 100vh;
+            background-image: url("../assets/img/sea.jpg");
+            background-size: cover;
+            position: relative;
+        }
+        .content-div{
+            width: 100%;
+            height: 100vh;
+        }
+        .headline{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 250px;
+            position: fixed;
+            top: 10vh;
+            color: #ffffff;
+            width: 100%;
+            text-align: center;
+            text-shadow: 1px 1px 10px rgba(0,0,0,.1);
+        }
+        .mask{
+            width: 100%;
+            height: 100%;
+            background-color: #343432;
+            background-image: url("../assets/img/sea.jpg");
+            background-size: cover;
+            mask-image: url('../assets/img/mask-sea.png');
+            -webkit-mask-image: url('../assets/img/mask-sea.png');
+            -webkit-mask-size: cover;
+        }
+        .text-blue{
+            color: blue;
+        }
+        .text-green{
+            color: green;
+        }
+        .text-orange{
+            color: orange;
+        }
+        .text-purple{
+            color: purple;
+        }
+        .bio-group{
+            background: white;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .bio-section{
+            height: 100vh;
+            
+        }
+        .bio-section .bio{
+            /* transform: translateY(-55%); */
+        }
+        .bio-section .bio-img-group{
+            z-index: 4;
+        }
+        .bio-section .bio-title{
+            margin-left: -10vw;
+            margin-top: 10vh;
+            font-weight: bold;
+        }
+        .bio-section .bio-description{
+            font-family: sans-serif;
+        }
+
+        .portofolio-grid{
+            
+        }
+        .portofolio-grid-group{
+            height: 30vh;
+        }
+        .portofolio-grid-section{
+
+        }
+        .h-100vh{
+            min-height: 100vh;
+        }
+        .project-block-item{
+            box-sizing: border-box;
+        }
+            .project-img-item{
+                height: 60vh;
+                /* background-color: blue; */
+            }
+
+                .project-img-item:hover{
+                    animation: 1s bounce ease-in;
+                }
+                .project-img-mobile{
+                    height: 100%;
+                }
+                .project-img-website{
+                    width: 80%;
+                }
+            .project-block-title{
+                height: 15vh;
+                /* background-color: green; */
+            }
+            .project-block-description{
+                box-sizing: border-box;
+                height: 15vh;
+                /* background-color: hotpink; */
+            }
+            .project-block-footer{
+                height: 10vh;
+                /* background-color: orange; */
+            }
+        .bg-gradient-warning{
+            background-image: linear-gradient(to bottom right, orange, yellow);
+        }
+        .bg-gradient-success{
+            background-image: linear-gradient(to bottom right, green, lightgreen);
+        }
+        .bg-gradient-primary{
+            background-image: linear-gradient(to top right, blue, lightblue);
+        }
+        .bg-gradient-danger{
+            background-image: linear-gradient(to top right, red, pink);
+        }
+        .bg-gradient-light{
+            background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(223, 223, 223));
+        }
+
+        @keyframes move-gradient{
+            0%{
+                background-position: 50% 100% !important;
+            }
+            50%{
+                background-position: 100% 50% !important;
+            }
+            100%{
+                background-position: 50% 100% !important;
+            }
+        }
+
+        .bg-animation-gradient-light{
+            background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(243, 243, 243));
+            background-size: 200% 200%;
+            background-position: 200% 200%;
+            animation: 5s move-gradient infinite reverse !important;
+        }
+
+        @keyframes move-gradient {
+            0%{
+                background-position: 200% 100%;
+            }
+            /* 25%{
+                background-position: 150% 150%;
+            } */
+            50%{
+                background-position: 150% 150%;
+            }
+            /* 75%{
+                background-position: 150% 150%s;
+            } */
+            100%{
+                background-position: 100% 100%;
+            }
+        }
+        
+
+        .blog-post-block a{
+            color: black !important;
+        }
+        .blog-post-block a:hover{
+            text-decoration: none;
+        }
+        .blog-post-block a:hover h1::before{
+            width: 100%;
+            transition-duration: 2s;
+        }
+
+        .blog-post-block{
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-post-bg-icon{
+            position: absolute;
+            z-index: 1;
+            left: -10px;
+            pointer-events: none;
+        }
+        .blog-post-group{
+            z-index: 2;
+            position: relative;
+        }
+
+        .blog-title:hover{
+            transform: scale(1.03);
+        }
+
+        .podcast-block{
+            position: relative;
+            overflow: hidden;
+        }
+
+        .podcast-block-group{
+            box-sizing: border-box;
+        }
+
+        .podcast-block-icon{
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .blog-post-item{
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-post-item .blog-item-background{
+            z-index: 1;
+            position: absolute;
+        }
+        
+        .blog-post-item .blog-item-background img{
+            height: 100%;
+            margin-left: -100px;
+        }
+
+        .blog-post-another-block{
+            background-image: url('../assets/portofolio/4.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .blog-post-item .blog-item-background::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(225,225,0,.5);
+        }
+    
+        .blog-post-item .card-body{
+            z-index: 2;
+            position: relative;
+        }
+
+        .blog-post-other .col-md-4{
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand f-quicksand" href="#"><b>Muhamad Firmansyah</b></a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portofolio.html">Portofolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connect on</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                <!-- <a class="dropdown-item" href="#">Action 2</a> -->
+                                <a class="dropdown-item" href="#"><i class="fab fa-telegram text-primary" aria-hidden="true"></i> Telegram</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-envelope text-primary"></i> Mail</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-blogger-b text-orange"></i> Blogger</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-twitter-square text-primary" aria-hidden="true"></i> Twitter</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-whatsapp text-green" aria-hidden="true"></i> WhatsApp</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-youtube text-danger" aria-hidden="true"></i> Youtube</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-linkedin text-blue" aria-hidden="true"></i> LinkedIn</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-gitlab text-orange" aria-hidden="true"></i> GitLab</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-instagram text-purple" aria-hidden="true"></i> Instagram</a>
+                                <a class="dropdown-item" href="#"><i class="fab fa-facebook-square text-blue" aria-hidden="true"></i> Facebook</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="parralax">
+            <div class="mask">
+                <span class="headline wow bounceInUp">FIRMANSYAH</span>
+            </div>
+        </div>
+        <div class="bio-group">
+            <div class="container">
+                <div class="row bio-section">
+                    <div class="col-md-6 py-3 bio-img-group d-flex align-items-center">
+                        <img src="../assets/upload/1.JPG" alt="" class="bio-img w-100 shadow rounded wow bounceInUp">
+                    </div>
+                    <div class="col-md-6 py-3 bio">
+                        <h1 class="display-1 bio-title wow bounceInLeft">ABOUT ME</h1>
+                        <article class="bio-description text-left">
+                            <p class="bio-description">
+                                <!-- Hai, perkenalkan nama saya Muhamad Firmansyah, atau anda bisa panggil saya Firman. Saya merupakan seorang software engineering yang berfokus pada bidang web design. -->
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum eaque officiis vitae optio. Mollitia laboriosam eveniet sapiente numquam quo, necessitatibus, soluta, eaque ad commodi amet eius repellendus beatae blanditiis temporibus.
+                            </p>
+                            <p class="bio-description">
+                                Velit cumque fugiat inventore veritatis facilis tempore? Magnam esse ipsam hic blanditiis odio expedita officia nam minima beatae cum? Libero culpa similique tempore fugit, at, nisi sit molestiae rerum nostrum dignissimos provident delectus reprehenderit, impedit non.
+                            </p>
+                            <p class="bio-description">
+                                Libero culpa similique tempore fugit, at, nisi sit molestiae rerum nostrum dignissimos provident delectus reprehenderit, impedit non.
+                            </p>
+                            <div class="buttons">
+                                <button class="btn btn-md btn-outline-light text-dark shadow-sm mr-2">More about me ...</button>
+                                <!-- <button class="btn btn-md btn-primary shadow-sm ml-2 rounded-0"><i class="fa fa-comment" aria-hidden="true"></i> Say Hi!</button> -->
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portofolio-grid py-5">
+            <div class="container">
+                <div class="row portofolio-grid-section">
+                    <div class="col-md-10 py-5">
+                        <div class="row align-items-center h-100 portofolio-grid-group">
+                            <div class="col-md-4 mb-2 portofolio-grid-item">
+                                <img src="../assets/portofolio/1.jpg" alt="" class="w-100 wow fadeIn" data-wow-delay=".5s">
+                            </div>
+                            <div class="col-md-4 my-2 portofolio-grid-item">
+                                <img src="../assets/portofolio/2.jpg" alt="" class="w-100 wow fadeIn" data-wow-delay="1s">
+                            </div>
+                            <div class="col-md-4 my-2 portofolio-grid-item">
+                                <img src="../assets/portofolio/3.jpg" alt="" class="w-100 wow fadeIn" data-wow-delay="1.5s">
+                            </div>
+                            <div class="col-md-4 my-2 portofolio-grid-item">
+                                <img src="../assets/portofolio/4.jpg" alt="" class="w-100 wow fadeIn" data-wow-delay=".5s">
+                            </div>
+                            <div class="col-md-4 my-2 portofolio-grid-item">
+                                <img src="../assets/portofolio/5.jpg" alt="" class="w-100 wow fadeIn" data-wow-delay="1s">
+                            </div>
+                            <div class="col-md-4 my-2 portofolio-grid-item">
+                                <img src="../assets/portofolio/6.jpg" alt="" class="w-100 wow fadeIn" data-wow-delay="1.5s">
+                            </div>
+                            <div class="col-md-4 my-2 portofolio-grid-item">
+                                <img src="../assets/portofolio/7.jpg" alt="" class="w-100 wow fadeIn" data-wow-delay=".5s">
+                            </div>
+                            <div class="col-md-4 my-2 portofolio-grid-item">
+                                <img src="../assets/portofolio/8.jpg" alt="" class="w-100 wow fadeIn" data-wow-delay="1s">
+                            </div>
+                            <div class="col-md-4 my-2 portofolio-grid-item">
+                                <img src="../assets/portofolio/9.jpg" alt="" class="w-100 wow fadeIn" data-wow-delay="1.5s">
+                            </div>
+                            <div class="col-md-12 mt-5 text-right">
+                                <button class="btn btn-sm btn-light shadow-sm">Load more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 py-5">
+                        <h1 class="text-center">
+                            P<br>
+                            O<br>
+                            R<br>
+                            T<br>
+                            O<br>
+                            F<br>
+                            O<br>
+                            L<br>
+                            I<br>
+                            O<br>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quote-block d-flex align-items-center h-100vh justify-content-center py-5 bg-animation-gradient-light">
+            <div class="container">
+                <h3 class="display-4">NF &mdash;</h3>
+                <h1 class="display-1 font-weight-bold">It's Real <i class="fas fa-car-side    "></i></h1>
+            </div>
+        </div>
+        <div class="project-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 h-100vh bg-gradient-warning text-white project-block-item">
+                        <div class="container">
+                            <div class="project-block-title d-flex align-items-end py-3">
+                                <h3>.01</h3>
+                            </div>
+                            <div class="project-img-item d-flex justify-content-center align-items-center">
+                                <img src="../assets/project/1.png" alt="" class="project-img-mobile shadow-lg rounded-lg">
+                            </div>
+                            <div class="project-block-description text-white py-3 d-flex align-items-start">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, explicabo?
+                            </div>
+                            <div class="project-block-footer d-flex align-items-start justify-content-between">
+                                <button class="btn btn-sm btn-outline-light"><i class="fas fa-heart" aria-hidden="true"></i></button>
+                                <button class="btn btn-sm btn-outline-light"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 h-100vh text-white project-block-item text-dark">
+                        <div class="container">
+                            <div class="project-block-title d-flex align-items-end py-3">
+                                <h3>.02</h3>
+                            </div>
+                            <div class="project-img-item d-flex justify-content-center align-items-center">
+                                <img src="../assets/project/3.png" alt="" class="project-img-website shadow-lg rounded-lg">
+                            </div>
+                            <div class="project-block-description py-3 d-flex align-items-start">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, explicabo?
+                            </div>
+                            <div class="project-block-footer d-flex align-items-start justify-content-between">
+                                <button class="btn btn-sm btn-outline-dark"><i class="fas fa-heart" aria-hidden="true"></i></button>
+                                <button class="btn btn-sm btn-outline-dark"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 h-100vh text-dark project-block-item">
+                        <div class="container">
+                            <div class="project-block-title d-flex align-items-end py-3">
+                                <h3>.03</h3>
+                            </div>
+                            <div class="project-img-item d-flex justify-content-center align-items-center">
+                                <img src="../assets/project/4.png" alt="" class="project-img-website shadow-lg rounded-lg">
+                            </div>
+                            <div class="project-block-description py-3 d-flex align-items-start">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, explicabo?
+                            </div>
+                            <div class="project-block-footer d-flex align-items-start justify-content-between">
+                                <button class="btn btn-sm btn-outline-dark"><i class="fas fa-heart" aria-hidden="true"></i></button>
+                                <button class="btn btn-sm btn-outline-dark"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 h-100vh text-dark project-block-item">
+                        <div class="container">
+                            <div class="project-block-title d-flex align-items-end py-3">
+                                <h3>.04</h3>
+                            </div>
+                            <div class="project-img-item d-flex justify-content-center align-items-center">
+                                <img src="../assets/project/2.png" alt="" class="project-img-mobile shadow-lg rounded-lg">
+                            </div>
+                            <div class="project-block-description py-3 d-flex align-items-start">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, explicabo?
+                            </div>
+                            <div class="project-block-footer d-flex align-items-start justify-content-between">
+                                <button class="btn btn-sm btn-outline-dark"><i class="fas fa-heart" aria-hidden="true"></i></button>
+                                <button class="btn btn-sm btn-outline-dark"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-post-block py-4 bg-light">
+            <div class="container">
+                <div class="blog-post-bg-icon">
+                    <img src="../assets/img/pattern.png" alt="" class="w-100">
+                </div>
+                <!-- <h1 class="display-3">YOU HAVE TO KNOW!</h1> -->
+                <!-- <div class="row mt-5">
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-12 mb-4 py-2 px-4 rounded-lg">
+                                <small class="bg-gradient-light">Tue, 30 March 2020 | 02:30 PM</small>
+                                <a href="#">
+                                    <h1 class="f-quicksand">Lorem ipsum dolor sit.</h1>
+                                </a>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, nulla quam consequatur aspernatur quae molestiae!</p>
+                            </div>
+                            <div class="col-md-12 my-4 py-2 px-4 rounded-lg">
+                                <small class="bg-gradient-light">Tue, 30 March 2020 | 02:30 PM</small>
+                                <a href="#">
+                                    <h1 class="f-quicksand">Consectetur Adipisicing Elit. Repudiandae..</h1>
+                                </a>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, nulla quam consequatur aspernatur quae molestiae!</p>
+                            </div>
+                            <div class="col-md-12 my-4 py-2 px-4 rounded-lg">
+                                <small class="bg-gradient-light">Tue, 30 March 2020 | 02:30 PM</small>
+                                <a href="#">
+                                    <h1 class="f-quicksand">Repudiandae, nulla quam consequatur?</h1>
+                                </a>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, nulla quam consequatur aspernatur quae molestiae!</p>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button class="btn btn-sm btn-light">Another Articles <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offset-md-1">
+                        <h3>Podcast &mdash;</h3>
+                        <ul class="list-unstyled mt-4">
+                            <li class="my-2">
+                                <div class="card bg-gradient-light border-0 shadow-sm">
+                                    <div class="card-body row align-items-center">
+                                        <div class="col-md-1 text-center">
+                                            <i class="fa fa-play-circle fa-2x text-warning" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-md-10">
+                                            Episode 1 &dash; Lorem, ipsum dolor
+                                        </div>
+                                    </div>
+                                    <div class="card-footer py-1 border-0 text-right d-flex justify-content-between">
+                                        <div>
+                                            <small class="text-white">2m 32s</small>
+                                        </div>
+                                        <div>
+                                            <small class="text-white">5 days ago</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-3">
+                                <div class="card bg-gradient-light border-0 shadow-sm">
+                                    <div class="card-body row align-items-center">
+                                        <div class="col-md-1 text-center">
+                                            <i class="fa fa-play-circle fa-2x text-warning" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-md-10">
+                                            Episode 2 &dash; Lorem, ipsum dolor : Adipisicing elit. Quos, in!
+                                        </div>
+                                    </div>
+                                    <div class="card-footer py-1 border-0 text-right d-flex justify-content-between">
+                                        <div>
+                                            <small class="text-white">2m 32s</small>
+                                        </div>
+                                        <div>
+                                            <small class="text-white">5 days ago</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+                <div class="row mt-4 align-items-center blog-post-group">
+                    <div class="col-md-4 mb-4 py-2 px-4 rounded-lg">
+                        <!-- <small class="bg-gradient-light">Tue, 30 March 2020 | 02:30 PM</small> -->
+                        <h1 class="f-quicksand blog-title">
+                            <a href="#">
+                                Lorem ipsum dolor sit.
+                            </a>
+                        </h1>
+                        <p>
+                            Eius porro beatae exercitationem sequi, suscipit commodi eaque? Odio porro pariatur doloribus illo cumque assumenda.
+                        </p>
+                    </div>
+                    <div class="col-md-4 my-4 py-2 px-4 rounded-lg">
+                        <!-- <small class="bg-gradient-light">Tue, 30 March 2020 | 02:30 PM</small> -->
+                        <h1 class="f-quicksand blog-title">
+                            <a href="#">
+                                Consectetur Adipisicing Elit. Repudiandae..
+                            </a>
+                        </h1>
+                        <p>
+                            Accusamus minus quaerat labore quidem necessitatibus itaque sunt magni voluptatem. Veritatis similique architecto.
+                        </p>
+                    </div>
+                    <div class="col-md-4 my-4 py-2 px-4 rounded-lg">
+                        <!-- <small class="bg-gradient-light">Tue, 30 March 2020 | 02:30 PM</small> -->
+                        <h1 class="f-quicksand blog-title">
+                            <a href="#">
+                                Repudiandae, nulla quam consequatur?
+                            </a>
+                        </h1>
+                        <p>
+                            Saepe eligendi doloremque in corporis quam asperiores aperiam nisi ea voluptates obcaecati cumque repellat.
+                        </p>
+                    </div>
+                    <div class="col-md-12 text-right">
+                        <button class="btn btn-sm btn-light">Another Articles <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="podcast-block">
+            <div class="podcast-block-icon">
+                <img src="../assets/img/rounded-pattern.png" alt="" class="w-100">
+            </div>
+            <div class="container">
+                <div class="row podcast-block-group py-5">
+                    <div class="col-md-5">
+                        <h1 class="font-weight-bold display-3">PODCAST<br>&mdash;</h1>
+                    </div>
+                    <div class="col-md-7 podcast-block-list">
+                        <ul class="list-unstyled w-100">
+                            <li class="mb-5">
+                                <div class="card bg-white border-0 shadow py-2">
+                                    <div class="card-body row align-items-center">
+                                        <div class="col-md-1 text-center">
+                                            <i class="fa fa-play-circle fa-2x text-warning" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-md-10">
+                                            Episode 3 &dash; Lorem, ipsum dolor : Molestias nobis eos sed.
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-light py-1 border-0 text-right d-flex justify-content-between">
+                                        <div>
+                                            <small class="text-dark">2m 32s</small>
+                                        </div>
+                                        <div>
+                                            <small class="text-dark">Tue, 14 March 2020</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-5">
+                                <div class="card bg-white border-0 shadow py-2">
+                                    <div class="card-body row align-items-center">
+                                        <div class="col-md-1 text-center">
+                                            <i class="fa fa-play-circle fa-2x text-warning" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-md-10">
+                                            Episode 2 &dash; Paudantium minus debitis fugit dolores. 
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-light py-1 border-0 text-right d-flex justify-content-between">
+                                        <div>
+                                            <small class="text-dark">2m 32s</small>
+                                        </div>
+                                        <div>
+                                            <small class="text-dark">Tue, 1 January 2020</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-5">
+                                <div class="card bg-white border-0 shadow py-2">
+                                    <div class="card-body row align-items-center">
+                                        <div class="col-md-1 text-center">
+                                            <i class="fa fa-play-circle fa-2x text-warning" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-md-10">
+                                            Episode 1 &dash; Lorem, ipsum dolor : Adipisicing elit. Quos, in!
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-light py-1 border-0 text-right d-flex justify-content-between">
+                                        <div>
+                                            <small class="text-dark">2m 32s</small>
+                                        </div>
+                                        <div>
+                                            <small class="text-dark">Tue, 30 March 2019</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="my-t text-right">
+                                <button class="btn btn-sm btn-light">Another Podcasts <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-block py-2 bg-white shadow">
+            <div class="container text-right">
+                <span class="f-quicksand">Muhamad Firmansyah &copy; 2020</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../assets/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script src="../assets/vendors/bootstrap/bootstrap.min.js"></script>
+<script src="../assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendors/fontawesome/all.js"></script>
+<script src="../assets/vendors/wowjs/wow.min.js"></script>
+
+<script>
+    wow = new WOW({
+        animateClass: 'animated',
+        offset: 100
+    });
+
+    wow.init();
+</script>
+</html>

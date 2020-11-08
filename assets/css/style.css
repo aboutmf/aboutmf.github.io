@@ -1,0 +1,572 @@
+@font-face{
+    src: url('../fonts/Anton Regular.woff2');
+    font-family: 'Anton';
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    src: url('../fonts/Indie Flower.woff2');
+    font-family: 'Flower';
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    src: url('../fonts/Kalam.woff2');
+    font-family: 'Kalam';
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    src: url('../fonts/Noto Serif.woff2');
+    font-family: 'Noto Serif';
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    src: url('../fonts/Quicksand.woff2');
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-display: swap;
+}
+
+.f-anton{
+    font-family: 'Anton';
+}
+
+.f-flower{
+    font-family: 'Flower';
+}
+
+.f-kalam{
+    font-family: 'Kalam';
+}
+
+.f-noto-serif{
+    font-family: 'Noto  Serif';
+}
+
+.f-quicksand{
+    font-family: 'Quicksand';
+}
+
+.wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100wh;
+}
+
+.h-100vh {
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.line-height-normal {
+    line-height: normal;
+}
+
+.hightlight_underline {
+    box-shadow: inset 0px -10px 0px 0px yellow;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* Navbar */
+
+.navbar {
+    font-family: 'sans-serif';
+    position: absolute;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.navbar .navbar-nav.ml-auto .nav-link {
+    font-size: 0.9rem;
+}
+
+.navbar .navbar-nav.ml-auto .active .nav-link {
+    font-weight: bold;
+}
+
+.navbar .navbar-nav.ml-auto:nth-child(2) .btn {
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    background-image: url('../img/23.jpeg') !important;
+    background-size: cover;
+}
+
+.banner h1 {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.banner h5 {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+    font-size: 1.3rem;
+    color: rgb(148, 148, 148);
+    margin-top: 1rem;
+}
+
+.h-line-2{
+    position: relative;
+    display: inline-block;
+    width: 1.5rem;
+    height: 0.1rem;
+    background: rgb(148, 148, 148);
+    border-radius: 1rem;
+    vertical-align: middle;
+}
+
+.h-line-1{
+    position: relative;
+    display: inline-block;
+    width: 1rem;
+    height: 0.1rem;
+    background: rgb(207, 207, 207);
+    border-radius: 1rem;
+    vertical-align: middle;
+    z-index: auto;
+}
+
+.hover-shake {
+    display: inline-block;
+    cursor: grab;
+}
+
+.hover-shake:hover {
+    animation: swing 0.5s;
+    animation-iteration-count: infinite;
+}
+
+/* Section */
+
+.section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.section h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+}
+
+.section h1 svg.fa-arrow-down {
+    display: none;
+}
+
+.section h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.section h4 {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.section article {
+    color: rgb(200, 200, 200);
+    text-align: justify;
+}
+
+/* Date */
+
+.date {
+    padding-left: 1rem;
+    text-align: right;
+    display: block;
+}
+
+/* Quote Breaker */
+
+.quote-breaker {
+    background-image: url('../img/1.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-breaker::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgb(0, 0, 255, 0.6);
+    top: 0;
+    left: 0;
+}
+
+.quote-breaker h1 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+/* Skill */
+
+.skill .card {
+    margin-bottom: 1rem !important;
+}
+
+.persentage h6 {
+    margin: 0;
+}
+
+.persentage-bullets {
+    width: 60%;
+    padding-right: 5rem;
+    display: flex;
+    justify-content: space-between;
+    /* background: orange; */
+}
+
+.persentage-bullets .bullet-filled {
+    width: 1.2rem;
+    height: 1.2rem;
+    /* background: rgb(119, 192, 245); */
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.persentage-bullets .bullet-unfilled {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: rgb(221, 221, 221);
+    border-radius: 50%;
+}
+
+/* Article */
+
+.article-list .card {
+    border: 0px !important;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    background: transparent;
+    color: black;
+}
+
+.article-list a {
+    text-decoration: none !important;
+}
+
+.article-list .card h2 {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+}
+
+.article-list .card .detail {
+    display: flex;
+    column-gap: 1rem;
+    font-size: 0.9rem;
+    margin-top: 1.1rem;
+}
+
+.article-list .card:hover::before{
+    left: 0px;
+    transition: 1s left;
+    /* background: rgb(238, 238, 238); */
+}
+
+.article-list .card:hover {
+    color: white;
+}
+
+.article-list .card:hover .h-line-1 {
+    background: white;
+}
+
+.article-list .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: blue;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+/* Category Tabs */
+.category-tab {
+    column-gap: 1rem;
+}
+
+.category-tab a {
+    padding: 0.3rem 1rem;
+    color: blue;
+}
+
+.category-tab a:active, .category-tab a:hover, .category-tab a:focus {
+    box-shadow: none;
+}
+
+.category-tab a.active {
+    background-color: blue;
+    color: white;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+footer .col-md-10{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-top: 1px solid #ededed;
+}
+
+footer h4 {
+    margin-bottom: 2rem;
+}
+
+footer ul {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    list-style: none;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+footer ul li a {
+    text-decoration: none !important;
+    color: #212529;
+}
+
+footer ul li .badge {
+    list-style: none;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #b7b7b7;
+    background-color: #ededed;
+    font-weight: 400;
+}
+
+footer .back-to-top a {
+    color: #6c757d!important;
+}
+
+/* Banner-2 */
+
+.banner-2 {
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.banner-2 h1 {
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+.banner-2 p{
+    color: rgb(189, 189, 189);
+    width: 50%;
+}
+
+/* Pototofolio */
+
+.portofolio .card {
+    border: 1px solid rgb(218, 218, 218, 0.3);
+}
+
+.portofolio .card-img {
+    overflow: hidden;
+    position: relative;
+}
+
+.portofolio .image-container {
+    border-radius: 0.3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid white;
+    position: relative;
+}
+
+.portofolio .card-img:hover .image-title {
+    left: 0px;
+    transition: 0.4s left ease-in-out;
+}
+
+.portofolio .card-img:hover .image-container {
+    transform: scale(1.1);
+    transition: 0.4s transform ease-in-out;
+}
+
+.portofolio .image-title {
+    position: absolute;
+    background: rgba(44, 132, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: -100%;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.portofolio .image-title h3 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.portofolio .image-title p {
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    margin: 0px;
+}
+
+.portofolio-list .card {
+    transition: 5s all;
+}
+
+@media (max-width: 576px) {
+
+    /* Navbar */
+
+    .navbar .navbar-collapse {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        background: white !important;
+    }
+
+    .navbar .navbar-toggler {
+        border: 0px !important;
+        outline: none;
+    }
+
+    .navbar .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar .nav-link {
+        font-size: 1rem !important;
+    }
+
+    /* Banner */
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner h5 {
+        font-size: 0.7rem;
+    }
+
+    /* Section */
+
+    .section h1 {
+        font-size: 1.4rem;
+        line-height: 3rem;
+        text-align: center;
+    }
+
+    .section h1 svg.fa-arrow-down {
+        position: relative;
+        margin: auto;
+        display: block !important;
+    }
+
+    .persentage-bullets {
+        padding-right: 0px;
+    }
+
+    .section .date {
+        display: none;
+    }
+
+    .section .card-header {
+        padding-top: 0rem !important;
+    }
+
+    .section .card p {
+        margin: 0rem;
+    }
+
+    /* Footer */
+    footer {
+        text-align: left;
+    }
+
+    footer .col-md-10 {
+        padding-bottom: 1rem;
+    }
+
+    footer ul {
+        margin-bottom: 2rem;
+    }
+
+    footer h4 {
+        margin-bottom: 1rem;
+    }
+
+    footer li {
+        text-align: left;
+    }
+
+    /* Banner-2 */
+    .banner-2 p{
+        width: 100%;
+    }
+
+    /* Category Tab */
+    .category-tab {
+        display: none !important;
+    }
+}
