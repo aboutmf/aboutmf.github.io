@@ -531,6 +531,10 @@ footer .back-to-top a {
         display: none;
     }
 
+    .section .card{
+        margin-bottom: 1rem !important;
+    }
+
     .section .card-header {
         padding-top: 0rem !important;
     }
